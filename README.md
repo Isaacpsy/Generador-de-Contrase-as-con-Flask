@@ -58,4 +58,4 @@ Este es un generador de contraseñas seguro implementado con Python (Flask) en e
 
 ## Autor
 
-Isaacpsy
+MatiasFrutos
