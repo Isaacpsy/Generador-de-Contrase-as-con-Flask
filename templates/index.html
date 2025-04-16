@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Contraseñas</h1>
+        <div class="options">
+            <label for="longitud">Longitud:</label>
+            <input type="number" id="longitud" value="12" min="4" max="32">
+            <br>
+            <input type="checkbox" id="incluirMayusculas" checked>
+            <label for="incluirMayusculas">Incluir Mayúsculas</label><br>
+            <input type="checkbox" id="incluirMinusculas" checked>
+            <label for="incluirMinusculas">Incluir Minúsculas</label><br>
+            <input type="checkbox" id="incluirNumeros" checked>
+            <label for="incluirNumeros">Incluir Números</label><br>
+            <input type="checkbox" id="incluirSimbolos">
+            <label for="incluirSimbolos">Incluir Símbolos</label><br>
+        </div>
+        <button id="generarBtn">Generar Contraseña</button>
+        <div class="resultado">
+            <label for="contrasenaGenerada">Contraseña Generada:</label>
+            <input type="text" id="contrasenaGenerada" readonly>
+            <button id="copiarBtn">Copiar</button>
+        </div>
+        <div id="mensajeError" class="error-message"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
